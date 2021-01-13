@@ -1,0 +1,330 @@
+{% load static %}
+<!doctype html>
+<html class="no-js" lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    {% if title %}
+        <title>SeyiDpsalmist - {{ title }} </title>
+    {% else %}
+        <title>SeyiDpsalmist &mdash; Home </title>
+    {% endif %}
+    
+    <meta name="keywords" content="Nigeria Music, African music, Juju afro, Gospel music">
+    <meta name="description" content="SeyiDpsalmist Music - Recreating african music">
+    <meta name="author" content="Sodstaracademy Samuel Damilare">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- <link rel="manifest" href="site.webmanifest"> -->
+    <link rel="shortcut icon" type="image/x-icon" href="{% static 'seyi_music/img/sdclogo.jpeg' %}">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <!-- Place favicon.ico in the root directory -->
+
+    <!-- CSS here -->
+    <link rel="stylesheet" href="{% static 'seyi_music/css/bootstrap.min.css' %}">
+    <link rel="stylesheet" href="{% static 'seyi_music/css/owl.carousel.min.css' %}">
+    <link rel="stylesheet" href="{% static 'seyi_music/css/magnific-popup.css' %}">
+    <link rel="stylesheet" href="{% static 'seyi_music/css/font-awesome.min.css' %}">
+    <link rel="stylesheet" href="{% static 'seyi_music/css/themify-icons.css' %}">
+    <link rel="stylesheet" href="{% static 'seyi_music/css/nice-select.css' %}">
+    <link rel="stylesheet" href="{% static 'seyi_music/css/audioplayer.css' %}">
+    <link rel="stylesheet" href="{% static 'seyi_music/css/flaticon.css' %}">
+    <link rel="stylesheet" href="{% static 'seyi_music/css/gijgo.css' %}">
+    <link rel="stylesheet" href="{% static 'seyi_music/css/animate.css' %}">
+    <link rel="stylesheet" href="{% static 'seyi_music/css/slick.css' %}">
+    <link rel="stylesheet" href="{% static 'seyi_music/css/slicknav.css' %}">
+    <link rel="stylesheet" href="{% static 'seyi_music/css/style.css' %}">
+    <link rel="stylesheet" href="{% static 'seyi_music/css/custom.css' %}">
+    <!-- <link rel="stylesheet" href="css/responsive.css"> -->
+</head>
+
+<style type="text/css">
+    h1, h2, h3, h4, h5, h6{
+        color: skyblue;
+    }
+    h1 {
+  font-size: 46px;
+  color: skyblue;
+}
+
+h2 {
+  font-size: 28px;
+  color: skyblue;
+}
+
+h3 {
+  font-size: 28px;
+  color: skyblue;
+}
+
+h4 {
+  font-size: 36px;
+  color: skyblue;
+}
+
+h5, h6 {
+  font-size: 14px;
+  color: skyblue;
+}
+</style>
+
+<body>
+    <!--[if lte IE 9]>
+            <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="https://browsehappy.com/">upgrade your browser</a> to improve your experience and security.</p>
+        <![endif]-->
+
+    <!-- header-start -->
+    <!-- <header>
+        <div class="header-area ">
+            <div id="sticky-header" class="main-header-area">
+                <div class="container-fluid">
+                    <div class="header_bottom_border">
+                        <div class="row align-items-center">
+                            <div class="col-xl-3 col-lg-2">
+                                <div class="logo">
+                                    <a href="{{ '/' }}" style="color: #ffffff">
+                                        <img src="{% static 'seyi_music/img/sdclogo.jpeg' %}" style="height: 35px; width:35px; " alt="logo"> SeyiDpsalmist
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="col-xl-6 col-lg-7">
+                                <div class="main-menu  d-none d-lg-block">
+                                    <nav>
+                                        <ul id="navigation">
+                                            <li><a class="active" href="{{ '/' }}">home</a></li>
+                                            <li><a href="{{ '/about' }}">About</a></li>
+                                            <li><a href="{{ '/tracks' }}">tracks</a></li>
+                                            <li><a href="{{ '/services' }}">Services</a></li>
+                                            <li><a href="{{ '/contact' }}">Contact</a></li>
+                                        </ul>
+                                    </nav>
+                                </div>
+                            </div>
+                            <div class="col-xl-3 col-lg-3 d-none d-lg-block">
+
+                                <div class="social_icon text-right">
+                                    <ul>
+                                        <li><a href="https://www.facebook.com/Seyi Dpsalmist"> <i class="fa fa-facebook"></i> </a></li>
+                                        <li><a href="#"> <i class="fa fa-twitter"></i> </a></li>
+                                        <li><a href="https://www.insatgram.com/Seyi_dpsalmist"> <i class="fa fa-instagram"></i> </a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="col-12" style="background-color: pink">
+                                <div class="mobile_menu d-block d-lg-none">navbar</div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </header>  -->
+
+    <!-- Navbar -->
+<nav class="navbar fixed-top navbar-expand-lg navbar-dark bg-dark" style="background-color:;">
+  <a class="navbar-brand"  href="{{ '/' }}" style="color: #ffffff">
+    <img src="{% static 'seyi_music/img/sdclogo.jpeg' %}" style="height: 35px; width:35px; " alt="logo"> SeyiDpsalmist
+ </a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarText" aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <div class="collapse navbar-collapse" id="navbarText">
+    <ul class="navbar-nav mr-auto">
+     <li class="nav-item"><a class="nav-link" style="color: #fff" href="{% url 'home' %}">Home</a></li>
+      <li class="nav-item"><a class="nav-link" style="color: #fff" href="{% url 'about' %}">About</a></li>
+      <li class="nav-item"><a class="nav-link" style="color: #fff" href="{% url 'tracks' %}">Tracks</a></li>
+      <li class="nav-item"><a class="nav-link" style="color: #fff" href="{% url 'services' %}">Services</a></li>
+      <li class="nav-item"><a class="nav-link" style="color: #fff" href="{% url 'contact' %}">Contact</a></li>
+    </ul>
+    <span class="navbar-text" style="margin-right: 20px; padding: 10px;">
+        <a href="https://www.facebook.com/Seyi Dpsalmist"> <i class="fa fa-facebook"></i> </a>
+        <a href="#"> <i class="fa fa-twitter"></i> </a>
+        <a href="https://www.insatgram.com/Seyi_dpsalmist"> <i class="fa fa-instagram"></i> </a>
+    </span>
+  </div>
+</nav>
+<!-- Navbar -->
+
+
+    <!-- header-end -->
+
+
+    <!-- BODY CONTENT -->
+
+
+    {% block test %}
+    {% endblock  %}
+
+    {% block content %}
+    {% endblock %}
+
+
+    <!-- contact_rsvp -->
+    <div class="contact_rsvp">
+        <div class="container">
+            <div class="row">
+                <div class="col-xl-12">
+                    <div class="text text-center">
+                        <h3>Get in Touch</h3>
+                        <a class="boxed-btn3" style="background-color: skyblue; color: #fff; border-radius: 20%" href="{{ '/contact' }}">Contact Me</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--/ contact_rsvp -->
+
+<!-- footer start -->
+    <footer class="footer">
+        <div class="footer_top">
+            <div class="container">
+                <div class="row">
+                    <div class="col-xl-6 col-md-6">
+                            <div class="footer_widget">
+                                    <h3 class="footer_title">
+                                            Services
+                                    </h3>
+                                <div>
+                            <ul>
+                                <li><a href="#">seyison48@gmail.com, contact@seyidpsalmist.com
+                                    </a></li>
+                                <li><a href="#">(+234) 812 2916 635, (+234) 808 0709 644
+                                    </a></li>
+                                <li><a href="#">19, Ifelodun street, Off Stadium Road, Lagos, Nigeria</a></li>
+                            </ul> class="subscribe-from">
+                                        <form action="#">
+                                                <input type="text" placeholder="Enter your mail">
+                                                <button class="boxed-btn3" style="background-color: skyblue; color: #fff; border-radius: 20%" type="submit" >Subscribe</button>
+                                            </form>
+                                </div>
+                                <p class="sub_text">Don't miss the latest from Seyi Dpsalmist. Subscribe today !</p>
+                                </div>
+                    </div>
+                    <div class="col-xl-5 col-md-5 offset-xl-1">
+                        <div class="footer_widget">
+                                <h3 class="footer_title">
+                                        Follow Me
+                                </h3>
+
+                            <div class="socail_links">
+                                <ul>
+                                    <li>
+                                        <a href="https://www.facebook.com/Seyi Dpsalmist">
+                                            <i class=" fa fa-facebook "></i>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="#">
+                                            <i class="fa fa-google-plus"></i>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="#">
+                                            <i class="fa fa-twitter"></i>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="#">
+                                            <i class="fa fa-youtube-play"></i>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="https://www.instagram.com/Seyi_dpsalmist">
+                                            <i class="fa fa-instagram"></i>
+                                        </a>
+                                    </li>
+                                </ul>
+                            </div> <br>
+                            <small style="color: #ffffff">Join me on the following social media platforms</small>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="copy-right_text">
+            <div class="container">
+                <div class="footer_border"></div>
+                <div class="row">
+                    <div class="col-xl-7 col-md-6">
+                        <p class="copy_right">
+                            <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+Copyright &copy;<script>document.write(new Date().getFullYear());</script> All rights reserved | This template is made with <i class="fa fa-heart-o" aria-hidden="true"></i> by <a href="https://colorlib.com" target="_blank">Colorlib</a>
+<!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+                        </p>
+                    </div>
+                    <div class="col-xl-5 col-md-6">
+                        <div class="footer_links">
+                            <ul>
+                                <li><a href="{{ '/' }}">home</a></li>
+                                <li><a href="{{ '/about' }}">about</a></li>
+                                <li><a href="{{ '/tracks' }}">tracks</a></li>
+                                <li><a href="{{ '/services' }}">services</a></li>
+                                <li><a href="{{ '/contact' }}">contact</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <!--/ footer end  -->
+
+    <!-- link that opens popup -->
+
+    <!-- JS here -->
+        <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" 
+            integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" 
+            crossorigin="anonymous">
+    </script>
+    <script src="{% static 'seyi_music/js/vendor/modernizr-3.5.0.min.js' %}"></script>
+    <script src="{% static 'seyi_music/js/vendor/jquery-1.12.4.min.js' %}"></script>
+    <script src="{% static 'seyi_music/js/popper.min.js' %}"></script>
+    <script src="{% static 'seyi_music/js/bootstrap.min.js' %}"></script>
+    <script src="{% static 'seyi_music/js/owl.carousel.min.js' %}"></script>
+    <script src="{% static 'seyi_music/js/isotope.pkgd.min.js' %}"></script>
+    <script src="{% static 'seyi_music/js/ajax-form.js' %}"></script>
+    <script src="{% static 'seyi_music/js/waypoints.min.js' %}"></script>
+    <script src="{% static 'seyi_music/js/jquery.counterup.min.js' %}"></script>
+    <script src="{% static 'seyi_music/js/imagesloaded.pkgd.min.js' %}"></script>
+    <script src="{% static 'seyi_music/js/audioplayer.js' %}"></script>
+    <script src="{% static 'seyi_music/js/scrollIt.js' %}"></script>
+    <script src="{% static 'seyi_music/js/jquery.scrollUp.min.js' %}"></script>
+    <script src="{% static 'seyi_music/js/wow.min.js' %}"></script>
+    <script src="{% static 'seyi_music/js/nice-select.min.js' %}"></script>
+    <script src="{% static 'seyi_music/js/jquery.slicknav.min.js' %}"></script>
+    <script src="{% static 'seyi_music/js/jquery.magnific-popup.min.js' %}"></script>
+    <script src="{% static 'seyi_music/js/plugins.js' %}"></script>
+    <script src="{% static 'seyi_music/js/gijgo.min.js' %}"></script>
+    <script src="{% static 'seyi_music/js/slick.min.js' %}"></script>
+    <!--contact js-->
+    <script src="{% static 'seyi_music/js/contact.js' %}"></script>
+    <script src="{% static 'seyi_music/js/jquery.ajaxchimp.min.js' %}"></script>
+    <script src="{% static 'seyi_music/js/jquery.form.js' %}"></script>
+    <script src="{% static 'seyi_music/js/jquery.validate.min.js' %}"></script>
+    <script src="{% static 'seyi_music/js/mail-script.js' %}"></script>
+
+    <script src="js/main.js"></script>
+    
+        <script>
+                $(function() {
+                    $('audio').audioPlayer({
+
+                    });
+                });
+
+                /* Toggle between showing and hiding the navigation menu links when the user clicks on the hamburger menu / bar icon */
+function myFunction() {
+  var x = document.getElementById("myLinks");
+  if (x.style.display === "block") {
+    x.style.display = "none";
+  } else {
+    x.style.display = "block";
+  }
+}
+            </script>
+
+</body>
+
+</html>

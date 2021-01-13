@@ -1,0 +1,92 @@
+{% extends 'seyi_music/base.html' %}
+{% load crispy_forms_tags %}
+{% block content %}
+
+ <!-- bradcam_area  -->
+    <div class="bradcam_area sdbgpic">
+        <div class="container">
+            <div class="row">
+                <div class="col-xl-12">
+                    <div class="bradcam_text text-center">
+                        <h3>contact</h3>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--/ bradcam_area  -->
+  
+
+<section class="contact-section section_padding">
+  <div class="container">
+
+    <!-- MAP -->
+      <div>
+         <iframe src="https://www.google.com/maps/embed?pb=!1m16!1m12!1m3!1d31714.398282324735!2d3.3349976904446414!3d6.483666791163991!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!2m1!1s19%20Ifelodun%20Street%2C%20Off%20stadium%2C%20Surulere%2C%20Lagos!5e0!3m2!1sen!2sng!4v1580266448754!5m2!1sen!2sng" width="100%" height="400" frameborder="0" style="border:0;" allowfullscreen=""></iframe>
+      </div>
+      <br>
+
+    <!-- CONTACT FORM -->
+        <div class="row" style="border: 0px solid red">
+            <div class="col-md-8" style="border: 0px double gold">
+              {% if messages %}
+                {% for message in messages %}
+                  <div class="alert alert-{{ message.tags }}">{{ message }}</div>
+                {% endfor %}
+              {% endif %}
+              <h2>Get In Touch</h2>
+                <p>Contact us using the form below.</p>
+                <span>{{ sender }}</span>
+            </div>
+            <!-- EMPTY SPACE -->
+            <div class="col-md-4"> </div> 
+        </div>
+
+              <div class="row"> 
+                <div class="col-md-8"  style="border: 0px double black">
+                  <form action="" method="POST" class="probootstrap-form">
+                    {% csrf_token %}
+                    {{  form|crispy }}
+                    <div class="form-group">
+                      <input type="submit" class="boxed-btn3" style="background-color: skyblue; color: #fff; border-radius: 20%" id="submit" name="submit" value="Send Message">
+                    </div>
+                  </form>
+              </div>
+
+               <div class="col-md-4" style="border: 0px dashed maroon">
+                <div class="media contact-info">
+                  <span class="contact-info__icon"><i class="ti-home"></i></span>
+                  <div class="media-body">
+                    <h3>19, Ifelodun Street, Off Stadium Road, Surulere.</h3>
+                    <p>Lagos, Nigeria</p>
+                  </div>
+                </div>
+                <div class="media contact-info">
+                  <span class="contact-info__icon"><i class="ti-tablet"></i></span>
+                  <div class="media-body">
+                    <h3>(+234) 808 0709 644 <br> (+234) 8130 838 310</h3>
+                    <p>Mon to Fri 9am to 6pm</p>
+                  </div>
+                </div>
+                <div class="media contact-info">
+                  <span class="contact-info__icon"><i class="ti-email"></i></span>
+                  <div class="media-body">
+                    <h3>contact@seyidpsalmist.com <br> seyison48@gmail.com</h3>
+                    <p>Send us your message anytime!</p>
+                  </div>
+                </div>
+              </div>
+             
+            </div>
+            <!-- EMPTY SPACE -->
+            <div class="col-md-4">
+              
+            </div>
+      </div>    
+
+  </div>
+</section>
+
+  <!-- ================ contact section end ================= -->
+
+{% endblock content %}

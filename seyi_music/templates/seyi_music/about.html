@@ -1,0 +1,78 @@
+{% extends 'seyi_music/base.html' %}
+{% load static %}
+
+{% block content %}
+
+<body>
+    <!--[if lte IE 9]>
+            <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="https://browsehappy.com/">upgrade your browser</a> to improve your experience and security.</p>
+        <![endif]-->
+
+    
+    <!-- bradcam_area  -->
+    <div class="bradcam_area sdbgpic">
+        <div class="container sdbgpic" >
+            <div class="row">
+                <div class="col-xl-12">
+                    <div class="bradcam_text text-center">
+                        <h3>About Me</h3>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--/ bradcam_area  -->
+
+
+    <!-- about_area  -->
+    <div class="about_area">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-xl-5 col-md-6">
+                    <div class="about_thumb">
+                        <img class="img-fluid" src="{% static 'seyi_music/img/TAR_0167.jpg' %}" alt="Seyi Dpsalmist Picture">
+                    </div>
+                </div>
+                <div class="col-xl-7 col-md-6">
+                    <div class="about_info">
+                        <h3>Bakare O. Anthony</h3>
+                        <p>Bakare Oluwaseyi Anthony populary known as Seyi Dpsalmist is a native of Okerimi-Oro, Irepo Local Government, kwara State, Nigeria. He was born and brought up in Lagos. </p>
+                        <p>He started his music career in 2006 in afellowship under Mountain of Fire and Miracles (MFM) and teh Dominion Apostolic Faith Church. He later joined the Redeemed Christian Church of God (RCCG) in the year 2012 where he has been till date. He is a Deacon and happily married to Victoria Ola Afolabi and blessed with children.</p>
+                        <p>Seyi Dpsalmist has ministered far and wide within and outside Nigeria in various church programs and events. He released his debut album titled <strong>Ko S'Oba Bi Ire</strong> on the 8th of Deceber, 2019.</p>
+                        <div class="signature">
+                            <img src="img/about/signature.png" alt="">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--end about_area  -->
+
+    <!-- gallery -->
+    <div class="gallery_area" style="border: 0px solid red">
+        <div class="container">
+            <div class="row">
+                <div class="col-xl-12">
+                    <div class="section_title text-center mb-65">
+                        <h2>Image Gallery</h2>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row grid" style="border: 0px solid gold">
+                {% for gallery in gallery %}
+                    <div class="col-md-4">
+                        <div class="single-gallery mb-30 gallery_hover">
+                            <div class="portfolio-img">
+                                <img src="{{ gallery.mypictures.url }}" height=300>
+                            </div>    
+                        </div>
+                    </div>
+                {% endfor %}
+                </div>
+        </div>
+    </div>
+    <!--/ gallery -->
+
+{% endblock content %}

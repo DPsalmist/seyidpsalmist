@@ -1,0 +1,96 @@
+{% extends 'seyi_music/base.html' %}
+{% load static %}
+
+{% block content %}
+
+<body>
+    
+    <!-- bradcam_area  -->
+    <div class="bradcam_area sdbgpic">
+        <div class="container sdbgpic" >
+            <div class="row">
+                <div class="col-xl-12">
+                    <div class="bradcam_text text-center">
+                        <h3>Services</h3>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--/ bradcam_area  -->
+
+    <!-- other services -->
+
+    <div class="about_area">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-xl-5 col-md-6">
+                    <div class="about_thumb">
+                        <img class="img-fluid" src="{% static 'seyi_music/img/TAR_0167.jpg' %}" alt="Seyi Dpsalmist Picture">
+                    </div>
+                </div>
+                <div class="col-xl-7 col-md-6">
+                    <div class="about_info">
+                        <h3>Live Band</h3>
+                        <p>Seyi Dpsalmist also have a band which performs at different functions. They include:</p>
+                        <ul>
+                        	<li>House Warming</li>
+                        	<li>End of the Year Party</li>
+                        	<li>Birthdays</li>
+                        	<li>Burial Ceremony</li>
+                        	<li>Coronation</li>
+                        	<li>etc</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="about_area">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-xl-5 col-md-6">
+                    <div class="about_thumb">
+                        <img class="img-fluid" src="{% static 'seyi_music/img/tWCM.jpg' %}" alt="Seyi Dpsalmist Picture">
+                    </div>
+                </div>
+                <div class="col-xl-7 col-md-6">
+                    <div class="about_info">
+                        <h3>Other Services</h3>
+                        <p>Seyi Dpsalmist concept offers other services. They include graphics design, printing, branding etc. </p>
+                        <p> He has been the manager of several events and functions that includes wedding, birthdays, etc</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- gallery of graphics-->
+    <div class="gallery_area" style="border: 0px solid red">
+        <div class="container">
+            <div class="row">
+                <div class="col-xl-12">
+                    <div class="section_title text-center mb-65">
+                        <h2>Graphics Gallery</h2>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row grid" style="border: 0px solid gold">
+                {% for graphic in graphics %}
+                    <div class="col-md-4">
+                        <div class="single-gallery mb-30 gallery_hover">
+                            <div class="portfolio-img">
+                                <img src="{{ graphic.graphic_pic.url }}" height=300>
+                            </div>    
+                        </div>
+                    </div>
+                {% endfor %}
+                </div>
+        </div>
+    </div>
+    <!--/ gallery -->
+
+</body>
+{% endblock content %}
