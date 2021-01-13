@@ -37,16 +37,6 @@ EMAIL_USE_TLS = True
 EMAIL_USE_SSL = False
 EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
 
-
-#zohomail smtp
-# EMAIL_HOST = 'smtp.zoho.com',
-# EMAIL_HOST_USER='dpsalmist26@zohomail.com',
-# EMAIL_HOST_PASSWORD='#damilaretestingdjango',
-# EMAIL_PORT=587,
-# EMAIL_USE_SSL = False
-# EMAIL_USE_TLS=True,
-# EMAIL_BACKEND= 'django.core.mail.backends.smtp.EmailBackend'
-
 #EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
 
 ALLOWED_HOSTS = os.getenv("DJANGO_ALLOWED_HOSTS", "127.0.0.1,localhost").split(",")
